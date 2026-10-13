@@ -13,6 +13,45 @@
     </header>
 
     <main>
+      <section id="organizer-container" class="organizer-section">
+        <h3>Organizer Tools</h3>
+        <form id="admin-login-form">
+          <div class="form-group">
+            <label for="admin-username">Username</label>
+            <input id="admin-username" name="username" autocomplete="username" required />
+          </div>
+          <div class="form-group">
+            <label for="admin-password">Password</label>
+            <input id="admin-password" name="password" type="password" autocomplete="current-password" required />
+          </div>
+          <button type="submit">Organizer Sign In</button>
+        </form>
+        <div id="admin-controls" hidden>
+          <button id="admin-logout" type="button">Sign Out</button>
+          <h4>Add Activity</h4>
+          <form id="activity-form">
+            <div class="form-group">
+              <label for="activity-name">Name</label>
+              <input id="activity-name" name="name" maxlength="100" required />
+            </div>
+            <div class="form-group">
+              <label for="activity-description">Description</label>
+              <input id="activity-description" name="description" maxlength="500" required />
+            </div>
+            <div class="form-group">
+              <label for="activity-schedule">Schedule</label>
+              <input id="activity-schedule" name="schedule" maxlength="160" required />
+            </div>
+            <div class="form-group">
+              <label for="activity-capacity">Maximum participants</label>
+              <input id="activity-capacity" name="max_participants" type="number" min="1" max="500" required />
+            </div>
+            <button type="submit">Create Activity</button>
+          </form>
+        </div>
+        <div id="admin-message" class="message hidden" role="status" aria-live="polite"></div>
+      </section>
+
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
